@@ -22,7 +22,7 @@ const fetchRandomData = async () => {
     // Emoji
     const emojiResponse = await fetch('https://emojihub.herokuapp.com/api/random');
     const emojiData = await emojiResponse.json();
-    document.getElementById('emoji').textContent = emojiData.htmlCode;
+    document.getElementById('emoji').innerHTML = emojiData.htmlCode;
 
     // Fact
     const factResponse = await fetch('https://uselessfacts.jsph.pl/random.json?language=en');
